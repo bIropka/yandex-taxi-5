@@ -1,0 +1,148 @@
+/***********************************************************************************************************************
+************** location-phone
+***********************************************************************************************************************/
+
+.location-phone {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  @media(max-width: 768px) {
+
+  }
+
+  .link-phone {
+    display: block;
+    margin: 0 20px 0 0;
+
+    a {
+      font-size: 22px;
+      color: $color-white;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+    }
+
+    @media(max-width: 980px) {
+
+    }
+
+    @media(max-width: 768px) {
+
+    }
+
+  }
+
+  .select-city {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 22px;
+      height: 29px;
+      background: url(../source/images/icon-geo.png) no-repeat 0 0;
+      background-size: cover;
+      position: absolute;
+      left: -30px;
+      top: -5px;
+
+      @media(max-width: 980px) {
+
+      }
+    }
+
+    &.active {
+
+      .current-value {
+
+        &:before {
+          -webkit-transform: rotate(180deg);
+          -moz-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+          -o-transform: rotate(180deg);
+          transform: rotate(180deg);
+        }
+
+        @media(max-width: 980px) {
+
+        }
+
+      }
+
+      ul {
+        display: block;
+        padding: 10px 25px 20px 15px;
+        position: absolute;
+        top: calc(100% + 20px);
+        right: 0;
+        background: #000;
+        z-index: 10;
+
+        li {
+          display: block;
+          text-align: right;
+          margin: 10px 0;
+          cursor: pointer;
+
+          span {
+            color: #fff;
+            white-space: nowrap;
+          }
+
+          a {
+            display: none;
+          }
+
+          &:hover span,
+          &.active span {
+            color: #b61f20;
+          }
+
+        }
+
+        @media(max-width: 768px) {
+          top: calc(100% + 10px);
+        }
+
+      }
+
+    }
+
+  }
+
+  .current-value {
+    font-size: 18px;
+    color: #000;
+    font-weight: 500;
+    line-height: 1;
+    position: relative;
+    padding-right: 20px;
+    white-space: nowrap;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 6px;
+      background: url(../source/images/select-marker.png) no-repeat 0 0;
+      position: absolute;
+      top: 8px;
+      right: 0;
+    }
+
+    @media(max-width: 980px) {
+
+    }
+
+  }
+
+}

@@ -1,0 +1,6 @@
+@mixin smooth($delay) {
+  -webkit-transition: $delay;
+  -moz-transition: $delay;
+  -o-transition: $delay;
+  transition: $delay;
+}

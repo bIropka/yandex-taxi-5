@@ -1,0 +1,70 @@
+/***********************************************************************************************************************
+************** general
+***********************************************************************************************************************/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $font-regular;
+  color: $color-black;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow: hidden;
+  background: url(../source/images/background-top.png) no-repeat center 270px, $color-brown url(../source/images/background.jpg) no-repeat center top;
+  opacity: 0;
+}
+
+main {
+  display: block;
+  flex-grow: 1;
+}
+
+a {
+  @include smooth(.4s);
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+}
+
+button {
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+}
+
+.custom-select {
+  display: block;
+
+  .current-value {
+    cursor: pointer;
+  }
+
+  ul {
+    display: none;
+  }
+
+  &.active {
+
+    ul {
+      display: block;
+    }
+
+  }
+
+}

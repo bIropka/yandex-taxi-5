@@ -1,0 +1,72 @@
+/***********************************************************************************************************************
+************** header
+***********************************************************************************************************************/
+
+header[role='banner'] {
+  background: #fff;
+  padding: 0 0 105px 0;
+
+  .row {
+    background: $color-black;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .logo {
+    display: block;
+    white-space: nowrap;
+    position: absolute;
+    left: 0;
+    top: 78px;
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+
+      &:first-of-type {
+        width: 50px;
+        margin: 0 10px 0 0;
+      }
+
+      &:last-of-type {
+        font-family: $font-semibold;
+        font-size: 22px;
+        line-height: 1;
+      }
+
+    }
+
+  }
+
+  nav {
+    display: flex;
+
+    a {
+      display: block;
+      font-family: $font-semibold;
+      color: $color-white;
+      font-size: 16px;
+      line-height: 1;
+      padding: 17px 25px;
+      text-decoration: none;
+
+      &:hover {
+        color: #4272a9;
+      }
+
+      &.active {
+        background: #4272a9;
+        color: $color-white;
+      }
+
+    }
+
+  }
+
+  .select-city {
+    position: absolute;
+    top: 90px;
+    right: 0;
+  }
+
+}

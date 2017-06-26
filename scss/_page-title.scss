@@ -1,0 +1,31 @@
+/***********************************************************************************************************************
+************** page-title
+***********************************************************************************************************************/
+
+.page-title {
+  background: $color-white;
+  text-align: center;
+  padding: 13px 0 40px;
+
+  h1 {
+    line-height: 1;
+    margin: 0;
+
+    &.index-page-title {
+      font-family: $font-bold;
+      font-size: 62px;
+      text-transform: uppercase;
+      color: #4272a9;
+
+      span {
+        font-family: inherit;
+        font-size: inherit;
+        color: #cf0f12;
+      }
+
+    }
+
+
+  }
+
+}
