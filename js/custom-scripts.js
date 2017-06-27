@@ -36,14 +36,18 @@ $(window).ready(function() {
 
         if ($(window).width() > 1023) {
 
-            if ($(window).scrollTop > 350) {
-                $('header[role="banner"]').addClass('header-short');
+            if ($(window).scrollTop() > 200 && $(window).scrollTop() < 351 ) {
+                $('header[role="banner"]').addClass('header-fixed');
+            } else if ($(window).scrollTop() < 201) {
+                $('header[role="banner"]').removeClass('header-fixed');
+            }
+
+            if ($(window).scrollTop() > 350) {
+                $('header[role="banner"]').addClass('header-short').removeClass('header-fixed');
             } else {
                 $('header[role="banner"]').removeClass('header-short');
             }
 
-        } else {
-            $('header[role="banner"]').addClass('header-short');
         }
 
     });

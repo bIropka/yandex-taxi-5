@@ -2023,6 +2023,34 @@ a {
 button:hover, button:active, button:focus {
   outline: none; }
 
+button {
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  display: inline-block;
+  border: none;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 30px;
+  font-family: "SegoeUI Bold", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer; }
+  button.button-red {
+    background: #cf0f12 url(../source/images/button-decor.png) no-repeat center top;
+    background-size: 100% auto; }
+  button.button-blue {
+    background: #4272a9 url(../source/images/button-decor.png) no-repeat center top;
+    background-size: 100% auto; }
+  button.button-black {
+    background: #000 url(../source/images/button-decor.png) no-repeat center top;
+    background-size: 100% auto; }
+  button:hover {
+    background-position: center -10px;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5); }
+
 .custom-select {
   display: block; }
   .custom-select .current-value {
@@ -2032,10 +2060,41 @@ button:hover, button:active, button:focus {
   .custom-select.active ul {
     display: block; }
 
+section {
+  display: block;
+  width: 100%;
+  padding: 30px 0; }
+
+h2 {
+  font-family: "SegoeUI Bold", sans-serif;
+  font-size: 37px;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  line-height: 1.25;
+  margin: 0 0 30px 0; }
+  h2 span {
+    display: block;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit; }
+
+.item-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; }
+  .item-list .item {
+    display: block; }
+
 /***********************************************************************************************************************
 ************** header
 ***********************************************************************************************************************/
 header[role='banner'] {
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
   background: #fff;
   padding: 0 0 105px 0; }
   header[role='banner'] .row {
@@ -2077,14 +2136,52 @@ header[role='banner'] {
     position: absolute;
     top: 90px;
     right: 0; }
+  header[role='banner'].header-fixed {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: -100%; }
+    header[role='banner'].header-fixed + main {
+      margin: 155px 0 0 0; }
+  header[role='banner'].header-short {
+    padding: 10px 0;
+    background: #000;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100; }
+    header[role='banner'].header-short + main {
+      margin: 155px 0 0 0; }
+    header[role='banner'].header-short .logo {
+      position: static;
+      margin: 0 0 0 20px; }
+      header[role='banner'].header-short .logo span:first-of-type {
+        width: 40px; }
+      header[role='banner'].header-short .logo span:last-of-type {
+        display: none; }
+    header[role='banner'].header-short nav a {
+      font-size: 15px;
+      padding: 17px 15px; }
+    header[role='banner'].header-short .location-phone {
+      margin: 0 20px 0 0;
+      padding: 0 0 35px 0; }
+      header[role='banner'].header-short .location-phone .link-phone {
+        margin: 0; }
+        header[role='banner'].header-short .location-phone .link-phone a {
+          font-size: 18px; }
+      header[role='banner'].header-short .location-phone .select-city {
+        top: auto;
+        bottom: 10px; }
+        header[role='banner'].header-short .location-phone .select-city .current-value {
+          color: #fff; }
+          header[role='banner'].header-short .location-phone .select-city .current-value:before {
+            background: url(../source/images/select-marker.png) no-repeat right top; }
 
 /***********************************************************************************************************************
 ************** location-phone
 ***********************************************************************************************************************/
 .location-phone {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: relative; }
   .location-phone .link-phone {
     display: block;
@@ -2215,18 +2312,386 @@ footer[role='contentinfo'] {
 /***********************************************************************************************************************
 ************** top-block
 ***********************************************************************************************************************/
+.top-block {
+  padding: 0 0 450px 0; }
+
+.top-advantages {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(75, 77, 80, 0.95);
+  padding: 25px;
+  border-top: 7px solid #000;
+  position: relative;
+  top: -8px;
+  box-shadow: inset 0 1px 0 0 #fff;
+  margin: 0 0 40px 0; }
+  .top-advantages .title {
+    font-family: "SegoeUI SemiBold", sans-serif;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase; }
+  .top-advantages ul {
+    white-space: nowrap; }
+    .top-advantages ul li {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 15px; }
+      .top-advantages ul li span {
+        display: inline-block;
+        vertical-align: middle;
+        font-family: "SegoeUI Italic", sans-serif;
+        color: #fff;
+        font-size: 14px; }
+      .top-advantages ul li:before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        width: 40px;
+        height: 40px;
+        margin: 0 10px 0 0;
+        background: url(../source/images/sprite-yellow.png) no-repeat 0 0; }
+  .top-advantages .percent {
+    padding: 0 65px 0 0;
+    text-align: right;
+    line-height: 1.2; }
+    .top-advantages .percent span:first-of-type {
+      font-family: "SegoeUI SemiBold", sans-serif;
+      font-size: 14px;
+      color: #fff;
+      text-transform: uppercase;
+      line-height: 1.2; }
+    .top-advantages .percent span:last-of-type {
+      display: block;
+      width: 125px;
+      height: 174px;
+      background: url(../source/images/medal.png) no-repeat 0 0;
+      background-size: cover;
+      position: absolute;
+      right: -30px;
+      top: -20px;
+      text-align: center;
+      font-family: "SegoeUI SemiBold", sans-serif;
+      font-size: 30px;
+      color: #fff;
+      padding: 28px 0 0 28px; }
+
+.top-buttons {
+  text-align: center; }
+  .top-buttons button {
+    width: 300px; }
+
 /***********************************************************************************************************************
 ************** problems
 ***********************************************************************************************************************/
+.problems .item {
+  width: 200px; }
+.problems .text {
+  text-align: right;
+  line-height: 1.2;
+  font-size: 15px;
+  font-family: "SegoeUI Italic", sans-serif;
+  color: #fff; }
+.problems .image-wrap {
+  position: relative; }
+  .problems .image-wrap:before {
+    content: '';
+    display: block;
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 15px; }
+  .problems .image-wrap:after {
+    content: '';
+    display: block;
+    width: 9px;
+    height: 9px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(100% + 25px);
+    left: 35px; }
+.problems .note {
+  font-size: 25px;
+  color: #ffb828;
+  margin: 30px 0 0 0;
+  text-align: center;
+  line-height: 1;
+  position: relative;
+  z-index: 1; }
+  .problems .note span {
+    display: inline-block;
+    font-size: inherit;
+    color: inherit;
+    line-height: 1;
+    background: #2a2220;
+    padding: 0 15px; }
+    .problems .note span:after {
+      content: '';
+      width: 100%;
+      height: 1px;
+      background: #797372;
+      position: absolute;
+      bottom: 8px;
+      left: 0;
+      z-index: -1; }
+  .problems .note:before, .problems .note:after {
+    content: '';
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to top, #797372, transparent);
+    position: absolute;
+    bottom: 8px;
+    left: 0; }
+  .problems .note:after {
+    right: 0;
+    left: auto; }
+
 /***********************************************************************************************************************
 ************** guarantees
 ***********************************************************************************************************************/
+.guarantees .item-list {
+  margin: 0 0 40px 0; }
+.guarantees .item {
+  width: 205px; }
+.guarantees .text {
+  text-align: center;
+  line-height: 1.2;
+  font-size: 15px;
+  font-family: "SegoeUI Italic", sans-serif;
+  color: #fff;
+  margin: 25px 0 0 0; }
+.guarantees .item-image {
+  width: 100%;
+  border: 4px solid #c4c1c1;
+  position: relative;
+  border-radius: 50%; }
+  .guarantees .item-image:before {
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
+    content: '';
+    display: block;
+    width: calc(100% + 9px);
+    height: 10px;
+    background: #2a2220;
+    position: absolute;
+    left: -4px;
+    right: -5px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1;
+    transform-origin: center; }
+  .guarantees .item-image:after {
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-bottom: 25px solid #d10f13;
+    border-left: 17px solid transparent;
+    border-right: 17px solid transparent;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: -13px;
+    z-index: 2;
+    transform-origin: center -88px; }
+  .guarantees .item-image .image-wrap {
+    width: 100%;
+    padding-top: calc(100% - 36px);
+    position: relative;
+    border: 18px solid #2a2220;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 1; }
+    .guarantees .item-image .image-wrap img {
+      display: block;
+      width: auto;
+      height: auto;
+      min-width: 100%;
+      min-height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0; }
+  .guarantees .item-image:hover:before {
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg); }
+  .guarantees .item-image:hover:after {
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg); }
+.guarantees .advantages {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; }
+  .guarantees .advantages .advantages-item {
+    display: flex;
+    width: 100%;
+    max-width: 370px;
+    background: #fff;
+    margin: 0 15px;
+    padding: 0 20px;
+    position: relative; }
+    .guarantees .advantages .advantages-item:first-of-type {
+      margin: 0 15px 0 0; }
+    .guarantees .advantages .advantages-item:last-of-type {
+      margin: 0 0 0 15px; }
+    .guarantees .advantages .advantages-item:before {
+      -webkit-transition: 0.4s;
+      -moz-transition: 0.4s;
+      -o-transition: 0.4s;
+      transition: 0.4s;
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 25px solid #4c83b6;
+      border-top: 17px solid transparent;
+      border-bottom: 17px solid transparent;
+      position: absolute;
+      left: -10px;
+      top: 15px; }
+  .guarantees .advantages .image-wrap {
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+    width: 145px;
+    height: 95px;
+    overflow: hidden;
+    align-self: flex-start;
+    margin: 0 0 20px; }
+    .guarantees .advantages .image-wrap img {
+      width: auto;
+      height: auto;
+      min-width: 100%;
+      min-height: 100%; }
+  .guarantees .advantages .text {
+    align-self: center;
+    padding: 0 0 0 25px;
+    line-height: 1.4;
+    font-family: "SegoeUI SemiBold", sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #000;
+    text-align: left;
+    max-width: calc(100% - 150px);
+    margin: 0; }
+    .guarantees .advantages .text span {
+      line-height: 1.4;
+      font-family: inherit;
+      font-size: inherit;
+      color: #e5161a; }
+  .guarantees .advantages .advantages-item:hover .image-wrap {
+    margin: 20px 0 0; }
+  .guarantees .advantages .advantages-item:hover:before {
+    top: calc(100% - 45px); }
+
 /***********************************************************************************************************************
 ************** conditions
 ***********************************************************************************************************************/
+.conditions .item-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center; }
+  .conditions .item-list .item {
+    display: block;
+    width: 380px;
+    margin: 20px 10px; }
+  .conditions .item-list .icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 80px;
+    height: 80px;
+    background: url(../source/images/sprite-white.png) no-repeat 0 0;
+    margin: 0 20px 0 0;
+    position: relative; }
+    .conditions .item-list .icon:before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      border: 2px solid #4c83b6;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: 0; }
+  .conditions .item-list span {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: "SegoeUI Italic", sans-serif;
+    font-size: 17px;
+    color: #fff;
+    width: calc(100% - 105px); }
+
 /***********************************************************************************************************************
 ************** requirements
 ***********************************************************************************************************************/
+.requirements h2 {
+  color: #ffb828; }
+
+.necessary {
+  margin: 0 0 40px 0; }
+  .necessary .columns:last-child {
+    text-align: right; }
+  .necessary ul li {
+    display: block;
+    padding: 0 0 0 30px;
+    position: relative;
+    font-size: 17px;
+    color: #fff;
+    margin: 25px 0; }
+    .necessary ul li:before {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 12px solid #d10f13;
+      border-top: 9px solid transparent;
+      border-bottom: 9px solid transparent;
+      position: absolute;
+      left: 0;
+      top: 4px; }
+    .necessary ul li:first-of-type {
+      margin: 0 0 25px 0; }
+    .necessary ul li:nth-of-type(2n) {
+      margin: 25px 0 25px 20px; }
+  .necessary .title {
+    font-size: 20px;
+    color: #4c83b6;
+    text-transform: uppercase; }
+  .necessary .text {
+    font-family: "SegoeUI Italic", sans-serif;
+    font-size: 17px;
+    color: #fff;
+    margin: 20px 0; }
+  .necessary button {
+    width: 235px; }
+
+.person-requirements {
+  background: #4c83b6 url(../source/images/decor-requirement-man.png) no-repeat left top;
+  background-size: auto 100%; }
+
+.car-requirements {
+  background: #4c83b6 url(../source/images/decor-requirement-car.png) no-repeat right top;
+  background-size: auto 100%; }
+
 /***********************************************************************************************************************
 ************** steps
 ***********************************************************************************************************************/

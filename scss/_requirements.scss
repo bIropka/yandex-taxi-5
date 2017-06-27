@@ -2,3 +2,77 @@
 ************** requirements
 ***********************************************************************************************************************/
 
+.requirements {
+
+  h2 {
+    color: #ffb828;
+  }
+
+}
+
+.necessary {
+  margin: 0 0 40px 0;
+
+  .columns:last-child {
+    text-align: right;
+  }
+
+  ul li {
+    display: block;
+    padding: 0 0 0 30px;
+    position: relative;
+    font-size: 17px;
+    color: $color-white;
+    margin: 25px 0;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 12px solid #d10f13;
+      border-top: 9px solid transparent;
+      border-bottom: 9px solid transparent;
+      position: absolute;
+      left: 0;
+      top: 4px;
+    }
+
+    &:first-of-type {
+      margin: 0 0 25px 0;
+    }
+
+    &:nth-of-type(2n) {
+      margin: 25px 0 25px 20px;
+    }
+
+  }
+
+  .title {
+    font-size: 20px;
+    color: #4c83b6;
+    text-transform: uppercase;
+  }
+
+  .text {
+    font-family: $font-italic;
+    font-size: 17px;
+    color: $color-white;
+    margin: 20px 0;
+  }
+
+  button {
+    width: 235px;
+  }
+
+}
+
+.person-requirements {
+  background: #4c83b6 url(../source/images/decor-requirement-man.png) no-repeat left top;
+  background-size: auto 100%;
+}
+
+.car-requirements {
+  background: #4c83b6 url(../source/images/decor-requirement-car.png) no-repeat right top;
+  background-size: auto 100%;
+}
