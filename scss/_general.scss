@@ -57,6 +57,16 @@ input {
 
 }
 
+textarea {
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+}
+
 button {
 
   &:hover,
@@ -205,5 +215,45 @@ input:focus:-moz-placeholder {
 }
 
 input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+textarea::-webkit-input-placeholder {
+  color: $color-black;
+  font-size: 15px;
+  opacity: 1;
+}
+
+textarea::-moz-placeholder {
+  color: $color-black;
+  font-size: 15px;
+  opacity: 1;
+}
+
+textarea:-moz-placeholder {
+  color: $color-black;
+  font-size: 15px;
+  opacity: 1;
+}
+
+textarea:-ms-input-placeholder {
+  color: $color-black;
+  font-size: 15px;
+  opacity: 1;
+}
+
+textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+textarea:focus::-moz-placeholder {
+  color: transparent;
+}
+
+textarea:focus:-moz-placeholder {
+  color: transparent;
+}
+
+textarea:focus:-ms-input-placeholder {
   color: transparent;
 }
