@@ -10,6 +10,10 @@
   color: $color-black;
 }
 
+body {
+  background: $color-brown;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -17,7 +21,7 @@
   min-width: 320px;
   min-height: 100vh;
   overflow: hidden;
-  background: url(../source/images/background-top.png) no-repeat center 270px, $color-brown url(../source/images/background.jpg) no-repeat center top;
+  background: url(../source/images/background-top.png) no-repeat center 270px, url(../source/images/background.jpg) no-repeat center top;
   opacity: 0;
 }
 

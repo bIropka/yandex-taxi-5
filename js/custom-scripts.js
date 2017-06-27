@@ -135,4 +135,11 @@ $(window).ready(function() {
         return false;
     });
 
+    $('input[type="file"]').change(function() {
+
+        var name = $(this).val().split('\\');
+        $(this).parent().siblings('.text').html(name[name.length - 1]);
+
+    });
+
 });
