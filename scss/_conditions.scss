@@ -15,27 +15,50 @@
       display: block;
       width: 380px;
       margin: 20px 10px;
-
-    }
-
-    .icon  {
-      display: inline-block;
-      vertical-align: middle;
-      width: 80px;
-      height: 80px;
-      background: url(../source/images/sprite-white.png) no-repeat 0 0;
-      margin: 0 20px 0 0;
       position: relative;
 
       &:before {
         content: '';
-        width: 100%;
-        height: 100%;
-        border: 2px solid #4c83b6;
-        border-radius: 50%;
+        display: inline-block;
+        vertical-align: middle;
+        width: 80px;
+        height: 80px;
+        background: url(../source/images/sprite-white.png) no-repeat 0 0;
+        margin: 0 20px 0 0;
+        position: relative;
+      }
+
+      &:nth-of-type(2):before {background-position: -80px 0;}
+      &:nth-of-type(3):before {background-position: -160px 0;}
+      &:nth-of-type(4):before {background-position: 0 -80px;}
+      &:nth-of-type(5):before {background-position: -80px -80px;}
+      &:nth-of-type(6):before {background-position: -160px -80px;}
+      &:nth-of-type(7):before {background-position: 0 -160px;}
+      &:nth-of-type(8):before {background-position: -80px -160px;}
+      &:nth-of-type(9):before {background-position: -160px -160px;}
+      &:nth-of-type(10):before {background-position: 0 -240px;}
+      &:nth-of-type(11):before {background-position: -80px -240px;}
+      &:nth-of-type(12):before {background-position: -160px -240px;}
+      &:nth-of-type(13):before {background-position: 0 -320px;}
+      &:nth-of-type(14):before {background-position: -80px -320px;}
+      &:nth-of-type(15):before {background-position: -160px -320px;}
+
+      &:after {
+        @include smooth(.4s);
+        content: '';
+        width: 80px;
+        height: 80px;
         position: absolute;
+        margin: auto;
         left: 0;
         top: 0;
+        bottom: 0;
+        background: url(../source/images/decor-conditions.png) no-repeat 0 0;
+        background-size: contain;
+      }
+
+      &:hover:after {
+        transform: rotate(180deg);
       }
 
     }

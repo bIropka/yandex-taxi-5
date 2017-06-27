@@ -38,6 +38,16 @@ a {
 
 }
 
+input {
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+}
+
 button {
 
   &:hover,
@@ -138,4 +148,44 @@ h2 {
     display: block;
   }
 
+}
+
+input::-webkit-input-placeholder {
+  color: $color-black;
+  font-size: 15px;
+  opacity: 1;
+}
+
+input::-moz-placeholder {
+  color: $color-black;
+  font-size: 15px;
+  opacity: 1;
+}
+
+input:-moz-placeholder {
+  color: $color-black;
+  font-size: 15px;
+  opacity: 1;
+}
+
+input:-ms-input-placeholder {
+  color: $color-black;
+  font-size: 15px;
+  opacity: 1;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+input:focus::-moz-placeholder {
+  color: transparent;
+}
+
+input:focus:-moz-placeholder {
+  color: transparent;
+}
+
+input:focus:-ms-input-placeholder {
+  color: transparent;
 }

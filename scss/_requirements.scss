@@ -67,12 +67,66 @@
 
 }
 
+.concrete-requirements {
+
+  .columns {
+    display: flex;
+    align-items: stretch;
+    padding: 0;
+  }
+
+  h3 {
+    width: 100%;
+    text-align: center;
+    font-family: $font-bold;
+    font-size: 32px;
+    color: #ffb828;
+    margin: 0 0 40px 0;
+  }
+
+  h4 {
+    font-family: $font-semibold;
+    font-size: 27px;
+    color: $color-white;
+  }
+
+  ul li {
+    display: block;
+    margin: 15px 0;
+    font-family: $font-italic;
+    font-size: 16px;
+    color: $color-white;
+    padding: 0 0 0 25px;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .5);
+      position: absolute;
+      margin: auto;
+      left: 0;
+      top: 0;
+      bottom: 0;
+    }
+
+  }
+
+}
+
 .person-requirements {
+  width: 100%;
   background: #4c83b6 url(../source/images/decor-requirement-man.png) no-repeat left top;
   background-size: auto 100%;
+  padding: 25px 15px 25px 220px;
 }
 
 .car-requirements {
-  background: #4c83b6 url(../source/images/decor-requirement-car.png) no-repeat right top;
+  width: 100%;
+  background: #d10f13 url(../source/images/decor-requirement-car.png) no-repeat right top;
   background-size: auto 100%;
+  padding: 25px 0 25px 40px;
 }
