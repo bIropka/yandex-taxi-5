@@ -11,6 +11,16 @@
     margin: 20px 0 10px;
   }
 
+  .form-questionnaire .row:last-child {
+    position: relative;
+    border-bottom: 1px solid #797372;
+
+    @media(max-width: 1230px) {
+      border: none;
+    }
+
+  }
+
   label {
     display: block;
     width: 100%;
@@ -200,6 +210,32 @@
     width: 100%;
     max-width: 400px;
     margin: 40px auto;
+
+    &:before,
+    &:after {
+      content: '';
+      width: 1px;
+      height: 100px;
+      background: linear-gradient(to top, #797372, transparent);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    &:after {
+      right: 0;
+      left: auto;
+    }
+
+  }
+
+  @media(max-width: 1230px) {
+
+    &:before,
+    &:after {
+      display: none;
+    }
+
   }
 
 }

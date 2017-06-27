@@ -185,4 +185,113 @@
 
   }
 
+  @media(max-width: 1230px) {
+
+    .columns:first-of-type {
+      padding: 0 0 0 15px;
+    }
+
+  }
+
+  @media(max-width: 1023px) {
+
+    .columns,
+    .columns:first-of-type {
+      padding: 0 15px;
+    }
+
+    .you-can {
+      text-align: center;
+      margin: 0 0 40px 0;
+
+      ul {
+        margin: 0 0 150px 0;
+      }
+
+      .text {
+        position: relative;
+        height: auto;
+        width: 100%;
+        padding: 15px 10px;
+        justify-content: center;
+      }
+
+    }
+
+  }
+
+  @media(max-width: 640px) {
+
+    h3 {
+      text-align: center;
+    }
+
+    .you-can {
+
+      &:before {
+        display: none;
+      }
+
+      ul {
+        margin: 0 0 30px 0;
+      }
+
+      .text {
+        font-size: 15px;
+      }
+
+    }
+
+    .steps-list {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0;
+
+      li {
+        margin: 20px;
+
+        &:before {
+          display: none;
+        }
+
+      }
+
+      .text {
+        font-family: $font-italic;
+        font-size: 14px;
+        line-height: 18px;
+        color: #ffb828;
+        text-align: center;
+        height: 50px;
+        overflow: hidden;
+      }
+
+      .icon {
+        display: block;
+        width: 70px;
+        height: 70px;
+        border: 1px solid $color-white;
+        margin: 20px auto 0;
+        background: #4c83b6 url(../source/images/sprite-steps.png) no-repeat 0 0;
+        border-radius: 50%;
+        position: relative;
+
+        &:after {
+          display: none;
+        }
+
+      }
+
+      &:before {
+        display: none;
+      }
+
+      &:after {
+        display: none;
+      }
+
+    }
+
+  }
+
 }

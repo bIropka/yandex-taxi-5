@@ -73,6 +73,9 @@ $(window).ready(function() {
             $('nav .active').removeClass('active');
             $(this).addClass('active');
 
+            $('nav').removeClass('active');
+            $('.banner').removeClass('active');
+
         }
 
         return false;
@@ -139,6 +142,13 @@ $(window).ready(function() {
 
         var name = $(this).val().split('\\');
         $(this).parent().siblings('.text').html(name[name.length - 1]);
+
+    });
+
+    $('.burger').click(function() {
+
+        $(this).toggleClass('active');
+        $('nav').toggleClass('active');
 
     });
 

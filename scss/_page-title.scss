@@ -23,8 +23,15 @@
         color: #cf0f12;
       }
 
-    }
+      @media(max-width: 1023px) {
+        font-size: 48px;
+      }
 
+      @media(max-width: 768px) {
+        font-size: 36px;
+      }
+
+    }
 
   }
 

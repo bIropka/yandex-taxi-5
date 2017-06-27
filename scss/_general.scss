@@ -23,6 +23,11 @@ body {
   overflow: hidden;
   background: url(../source/images/background-top.png) no-repeat center 270px, url(../source/images/background.jpg) no-repeat center top;
   opacity: 0;
+
+  @media(max-width: 1023px) {
+    background: url(../source/images/background.jpg) no-repeat center top;
+  }
+
 }
 
 main {
@@ -141,6 +146,10 @@ h2 {
     line-height: inherit;
   }
 
+  @media(max-width: 768px) {
+    font-size: 28px;
+  }
+
 }
 
 .item-list {
@@ -150,6 +159,11 @@ h2 {
 
   .item {
     display: block;
+  }
+
+  @media(max-width: 1230px) {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
 }

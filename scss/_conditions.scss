@@ -8,8 +8,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
-    align-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
 
     .item {
       display: block;
@@ -61,6 +61,27 @@
         transform: rotate(180deg);
       }
 
+      @media(max-width: 1230px) {
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
+        padding: 100px 0 0 0;
+        margin: 30px 20px;
+
+
+        &:before,
+        &:after {
+          display: block;
+          margin: auto;
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: auto;
+        }
+
+      }
+
     }
 
     span {
@@ -70,6 +91,10 @@
       font-size: 17px;
       color: $color-white;
       width: calc(100% - 105px);
+    }
+
+    @media(max-width: 1230px) {
+      justify-content: center;
     }
 
   }

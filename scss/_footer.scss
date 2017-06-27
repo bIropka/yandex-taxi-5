@@ -8,9 +8,9 @@ footer[role='contentinfo'] {
   background: #fff;
   padding: 25px 0;
 
-  .columns {
+  .columns:last-of-type {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
   }
 
@@ -38,6 +38,8 @@ footer[role='contentinfo'] {
   }
 
   .link-phone {
+    display: inline-block;
+    vertical-align: middle;
     margin: 0 50px 0 0;
 
     a {
@@ -48,10 +50,69 @@ footer[role='contentinfo'] {
 
   .location-phone {
 
-    .select-city ul {
-      top: auto;
-      bottom: calc(100% + 42px);
-      padding: 10px 25px 20px 15px;
+    .select-city {
+      display: inline-block;
+      vertical-align: middle;
+
+      ul {
+        top: auto;
+        bottom: calc(100% + 42px);
+        padding: 10px 25px 20px 15px;
+      }
+
+    }
+
+  }
+
+  @media(max-width: 768px) {
+
+    .location-phone {
+      display: block;
+      text-align: right;
+
+      .link-phone {
+        display: block;
+        margin: 0 0 5px 0;
+
+        a {
+          font-size: 18px;
+        }
+
+      }
+
+      .select-city {
+
+        .current-value {
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+      }
+
+    }
+
+  }
+
+  @media(max-width: 640px) {
+    text-align: center;
+
+    .columns:last-of-type {
+      justify-content: center;
+    }
+
+    .location-phone {
+      text-align: center;
+
+      .select-city:before {
+        display: inline-block;
+        vertical-align: middle;
+        position: static;
+      }
+
+    }
+
+    .logo {
+      margin: 0 0 20px 0;
     }
 
   }

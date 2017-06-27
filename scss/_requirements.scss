@@ -15,6 +15,11 @@
 
   .columns:last-child {
     text-align: right;
+
+    @media(max-width: 640px) {
+      text-align: left;
+    }
+
   }
 
   ul li {
@@ -44,6 +49,12 @@
 
     &:nth-of-type(2n) {
       margin: 25px 0 25px 20px;
+    }
+
+    @media(max-width: 1023px) {
+      &:nth-of-type(2n) {
+        margin: 25px 0;
+      }
     }
 
   }
@@ -129,4 +140,14 @@
   background: #d10f13 url(../source/images/decor-requirement-car.png) no-repeat right top;
   background-size: auto 100%;
   padding: 25px 0 25px 40px;
+}
+
+@media(max-width: 1230px) {
+
+  .person-requirements,
+  .car-requirements {
+    background-image: none;
+    padding: 25px;
+  }
+
 }

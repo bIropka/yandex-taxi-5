@@ -93,4 +93,33 @@
 
   }
 
+  @media(max-width: 1230px) {
+
+    .item {
+      margin: 20px;
+    }
+
+  }
+
+  @media(max-width: 768px) {
+
+    .note {
+
+      span {
+
+        &:after {
+          display: none;
+        }
+
+      }
+
+      &:before,
+      &:after {
+        display: none;
+      }
+
+    }
+
+  }
+
 }
