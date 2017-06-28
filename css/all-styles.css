@@ -2323,7 +2323,7 @@ header[role='banner'] {
       display: block;
       position: fixed;
       width: 100%;
-      height: calc(100vh - 82px);
+      height: calc(100vh - 79px);
       left: 0;
       top: 150%;
       background: #000;
@@ -2332,7 +2332,7 @@ header[role='banner'] {
       padding: 50px 0 0 0;
       text-align: center; }
       header[role='banner'].header-short nav.active {
-        top: 82px; }
+        top: 79px; }
       header[role='banner'].header-short nav a {
         display: inline-block;
         width: auto;
@@ -2565,6 +2565,10 @@ footer[role='contentinfo'] {
         height: 40px;
         margin: 0 10px 0 0;
         background: url(../source/images/sprite-yellow.png) no-repeat 0 0; }
+      .top-advantages ul li:nth-child(2):before {
+        background-position: -40px 0; }
+      .top-advantages ul li:nth-child(3):before {
+        background-position: -80px 0; }
   .top-advantages .percent {
     padding: 0 65px 0 0;
     text-align: right;
@@ -3156,6 +3160,8 @@ footer[role='contentinfo'] {
   margin: 0 0 25px 0; }
 .steps .you-can h3 {
   color: #ffb828; }
+.steps .you-can ul {
+  margin: -10px 0 0 0; }
 .steps .you-can li {
   display: inline-block;
   vertical-align: middle;

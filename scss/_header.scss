@@ -234,7 +234,7 @@ header[role='banner'] {
         display: block;
         position: fixed;
         width: 100%;
-        height: calc(100vh - 82px);
+        height: calc(100vh - 79px);
         left: 0;
         top: 150%;
         background: $color-black;
@@ -244,7 +244,7 @@ header[role='banner'] {
         text-align: center;
 
         &.active {
-          top: 82px;
+          top: 79px;
         }
 
         a {
