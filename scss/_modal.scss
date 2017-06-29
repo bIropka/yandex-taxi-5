@@ -30,6 +30,21 @@
 
   }
 
+  &.window-questionnaire {
+
+    .window-inner {
+      display: flex;
+      flex-wrap: wrap;
+      width: 600px;
+
+      @media(max-width: 768px) {
+        width: 320px;
+      }
+
+    }
+
+  }
+
   .close-window {
     @include smooth(.4s);
     display: block;
@@ -97,10 +112,23 @@
 
   }
 
+  fieldset {
+    display: block;
+    outline: none;
+    width: 50%;
+    margin: 0;
+    border: none;
+
+    @media(max-width: 768px) {
+      width: 100%;
+    }
+
+  }
+
   label {
     display: block;
     width: 100%;
-    margin: 20px 0;
+    margin: 10px 0;
   }
 
   input {
@@ -126,6 +154,214 @@
 
   button {
     width: 100%;
+  }
+
+  .title {
+    width: 100%;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 20px 0;
+  }
+
+  .select-form {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    position: relative;
+
+    .current-value {
+      width: 100%;
+      height: 46px;
+      line-height: 44px;
+      padding: 0 45px 0 20px;
+      color: $color-black;
+      font-size: 15px;
+      position: relative;
+      background: $color-white;
+      border-radius: 23px;
+      border: 1px solid #4272a9;
+
+      &:before {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: 12px solid #4c83b6;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        right: 15px;
+      }
+
+    }
+
+    .hidden-field {
+      display: none;
+    }
+
+    &.active {
+
+      .current-value {
+        border-radius: 23px 23px 0 0;
+        border-bottom: none;
+      }
+
+      .current-value:before {
+        transform: rotate(180deg);
+      }
+
+      ul {
+        padding: 0 45px 10px 20px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        border: 1px solid #4272a9;
+        border-top: none;
+        background: $color-white;
+        border-radius: 0 0 23px 23px;
+        z-index: 10;
+
+        li {
+          display: block;
+          margin-bottom: 10px;
+          color: #3e4040;
+          font-size: 15px;
+          cursor: pointer;
+
+          &:hover,
+          &.active {
+            color: #ff9900;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  input[type='checkbox'] {
+    display: none;
+  }
+
+  input[type='checkbox'] + label {
+    font-size: 15px;
+    color: $color-black;
+    padding: 0 0 0 30px;
+    position: relative;
+    cursor: pointer;
+    display: block;
+    width: auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  input[type='checkbox'] + label:before {
+    content:'';
+    display: block;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #4272a9;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  input[type='checkbox']:checked + label {
+    color: $color-black;
+  }
+
+  input[type='checkbox']:checked + label:before {
+    background: url(../source/images/sprite-ok.png) no-repeat -20px center;
+    background-size: auto;
+  }
+
+  .field-upload {
+    width: 100%;
+    height: 46px;
+    margin: 10px 0;
+    position: relative;
+    background: $color-white;
+    border: 1px solid #4272a9;
+    border-radius: 23px;
+
+    .text {
+      display: block;
+      width: calc(100% - 100px);
+      height: 100%;
+      line-height: 46px;
+      padding: 0 0 0 20px;
+      color: $color-black;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    label {
+      margin: auto;
+      width: 70px;
+      height: 30px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 15px;
+      background-size: cover;
+      text-align: center;
+      cursor: pointer;
+      background: #4c83b6;
+      border-radius: 15px;
+
+      span {
+        display: block;
+        height: 100%;
+        line-height: 30px;
+        color: $color-white;
+        font-size: 12px;
+        font-family: $font-semibold;
+        text-transform: uppercase;
+      }
+
+      input {
+        display: block;
+        width: 0;
+        height: 0;
+        opacity: 0;
+      }
+
+    }
+
+  }
+
+  button[type='submit'] {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 40px auto;
+
+    &:before,
+    &:after {
+      content: '';
+      width: 1px;
+      height: 100px;
+      background: linear-gradient(to top, #797372, transparent);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    &:after {
+      right: 0;
+      left: auto;
+    }
+
   }
 
 }

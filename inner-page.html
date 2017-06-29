@@ -114,7 +114,7 @@
 
                     <div class="top-buttons">
 
-                        <button class="to-questionnaire button-red">Анкета для подключения</button>
+                        <button class="to-form-questionnaire button-red">Анкета для подключения</button>
 
                         <button class="form-callback button-blue">Форма обратной связи</button>
 
@@ -257,6 +257,204 @@
         <label><input type="text" placeholder="Ваш телефон"></label>
 
         <button type="submit" class="button-blue">Отправить</button>
+
+    </form>
+
+</div>
+
+<div class="window window-questionnaire">
+
+    <form action="#" class="window-inner form-questionnaire">
+
+        <div class="close-window"></div>
+
+        <div class="title">Сведения о водителе</div>
+
+        <label><input type="text" placeholder="Фамилия, Имя, Отчество"></label>
+
+        <label><input type="text" placeholder="Номер телефона"></label>
+
+        <div class="title">Водительское удостоверение</div>
+
+        <div class="custom-select select-form">
+                <div class="current-value">Дата выдачи</div>
+                <ul>
+                    <li>Пункт - 1</li>
+                    <li>Пункт - 2</li>
+                    <li>Пункт - 3</li>
+                </ul>
+                <label class="hidden-field"><input type="text"></label>
+            </div>
+
+        <label><input type="text" placeholder="Серия"></label>
+
+        <label><input type="text" placeholder="Номер"></label>
+
+        <div class="title">Сведения об автомобиле</div>
+
+        <div class="custom-select select-form">
+            <div class="current-value">Марка</div>
+            <ul>
+                <li>Пункт - 1</li>
+                <li>Пункт - 2</li>
+                <li>Пункт - 3</li>
+            </ul>
+            <label class="hidden-field"><input type="text"></label>
+        </div>
+
+        <label><input type="text" placeholder="Гос. номер"></label>
+
+        <label><input type="text" placeholder="Год выпуска"></label>
+
+        <div class="custom-select select-form">
+            <div class="current-value">Модель</div>
+            <ul>
+                <li>Пункт - 1</li>
+                <li>Пункт - 2</li>
+                <li>Пункт - 3</li>
+            </ul>
+            <label class="hidden-field"><input type="text"></label>
+        </div>
+
+        <div class="custom-select select-form">
+            <div class="current-value">Тип кузова</div>
+            <ul>
+                <li>Пункт - 1</li>
+                <li>Пункт - 2</li>
+                <li>Пункт - 3</li>
+            </ul>
+            <label class="hidden-field"><input type="text"></label>
+        </div>
+
+        <div class="custom-select select-form">
+            <div class="current-value">Цвет</div>
+            <ul>
+                <li>Пункт - 1</li>
+                <li>Пункт - 2</li>
+                <li>Пункт - 3</li>
+            </ul>
+            <label class="hidden-field"><input type="text"></label>
+        </div>
+
+        <label><input type="text" placeholder="Дата выдачи лицензии такси"></label>
+
+        <label><input type="text" placeholder="Серия лицензии такси"></label>
+
+        <label><input type="text" placeholder="Номер лицензии такси"></label>
+
+        <div class="title">Дополнительные услуги</div>
+
+        <fieldset>
+
+            <input type="checkbox" id="additional-1" checked>
+            <label for="additional-1">Детское кресло, люлька, бустер</label>
+
+            <input type="checkbox" id="additional-2">
+            <label for="additional-2">Лыжи, сноуборд</label>
+
+            <input type="checkbox" id="additional-3" checked>
+            <label for="additional-3">Велосипед</label>
+
+            <input type="checkbox" id="additional-4">
+            <label for="additional-4">Животные</label>
+
+            <input type="checkbox" id="additional-5" checked>
+            <label for="additional-5">Кондиционер</label>
+
+            <input type="checkbox" id="additional-6">
+            <label for="additional-6">Курение в салоне</label>
+
+        </fieldset>
+
+        <fieldset>
+
+            <input type="checkbox" id="additional-7">
+            <label for="additional-7">Wi-Fi</label>
+
+            <input type="checkbox" id="additional-8">
+            <label for="additional-8">Женщина-водитель</label>
+
+            <input type="checkbox" id="additional-9">
+            <label for="additional-9">Универсал</label>
+
+            <input type="checkbox" id="additional-10">
+            <label for="additional-10">Минивэн на 6 мест</label>
+
+            <input type="checkbox" id="additional-11" checked>
+            <label for="additional-11">Минивэн на 7-14 мест</label>
+
+            <input type="checkbox" id="additional-12">
+            <label for="additional-12">Микроавтобус на 15-20 мест</label>
+
+        </fieldset>
+
+        <div class="title">Копии документов</div>
+
+        <div class="field-upload">
+            <div class="text">Паспорт (страница с фото)</div>
+            <label><span>обзор</span><input type="file"></label>
+        </div>
+
+        <div class="field-upload">
+            <div class="text">Паспорт (страница с регистрацией)</div>
+            <label><span>обзор</span><input type="file"></label>
+        </div>
+
+        <div class="field-upload">
+            <div class="text">СТС (лицевая сторона)</div>
+            <label><span>обзор</span><input type="file"></label>
+        </div>
+
+        <div class="field-upload">
+            <div class="text">СТС (обратная сторона)</div>
+            <label><span>обзор</span><input type="file"></label>
+        </div>
+
+        <div class="field-upload">
+            <div class="text">Лицензия такси (лицевая сторона)</div>
+            <label><span>обзор</span><input type="file"></label>
+        </div>
+
+        <div class="field-upload">
+            <div class="text">Водительское удостоверение (сторона с фотографией)</div>
+            <label><span>обзор</span><input type="file"></label>
+        </div>
+
+        <div class="field-upload">
+            <div class="text">БСО</div>
+            <label><span>обзор</span><input type="file"></label>
+        </div>
+
+        <div class="title">Фото автомобиля</div>
+
+        <div class="field-upload">
+            <div class="text">Передняя часть и правый борт</div>
+            <label><span>обзор</span><input type="file"></label>
+        </div>
+
+        <div class="field-upload">
+            <div class="text">Задняя часть и левый борт</div>
+            <label><span>обзор</span><input type="file"></label>
+        </div>
+
+        <div class="field-upload">
+            <div class="text">Передние сидения</div>
+            <label><span>обзор</span><input type="file"></label>
+        </div>
+
+        <div class="field-upload">
+            <div class="text">Задние сидения</div>
+            <label><span>обзор</span><input type="file"></label>
+        </div>
+
+        <div class="field-upload">
+            <div class="text">Детское кресло (при наличии)</div>
+            <label><span>обзор</span><input type="file"></label>
+        </div>
+
+        <div class="small-12 columns">
+            <button type="submit" class="button-red">Подключиться к Яндекс такси</button>
+        </div>
 
     </form>
 
